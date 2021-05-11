@@ -6,14 +6,14 @@
 </p>
 
 <h1 align="center">
-  Chromatic's Intro to Storybook React template
+ Preinstalled storybook template
 </h1>
 
 This template ships with the main React and Storybook configuration files you'll need to get up and running fast.
 
 ## 🚅  Quick start
 
-1.  **Create the application.**
+1.  **Git clone.**
 
     Use [degit](https://github.com/Rich-Harris/degit) to get this template.
 
@@ -34,14 +34,15 @@ This template ships with the main React and Storybook configuration files you'll
     yarn
     ```
 
-1.  **Open the source code and start editing!**
-
-    Open the `taskbox` directory in your code editor of choice and building your first component!
 
 1.  **Browse your stories!**
 
     Run `yarn storybook` to see your component's stories at `http://localhost:6006`
 
+1.  **Easy deploy thru docker-compose up**
+
+    Automatically build react & storybook images and start containers port at 8083 and 6006 each
+    
 ## 🔎 What's inside?
 
 A quick look at the top-level files and directories included with this template.
