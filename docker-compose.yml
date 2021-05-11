@@ -1,0 +1,32 @@
+version: "3.7"
+# networks:
+#   kong-net:
+#     external: true
+services:
+  imcreacttemp:
+    container_name: imcreacttempc
+    image: yknam/imcreacttemp
+    # networks:
+    #   - kong-net
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - 8083:80
+    # environment:
+    #   - CHOKIDAR_USEPOLLING=true
+  imcstorybook:
+    container_name: imcstorybookc
+    image: yknam/imcstorybook
+    # networks:
+    #   - kong-net
+    build:
+      context: .
+      dockerfile: storybook.Dockerfile
+    volumes:
+      - ".:/usr/src/app;"
+    ports:
+      - 6006:80
